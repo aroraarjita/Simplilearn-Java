@@ -1,0 +1,22 @@
+INSERT INTO category_tab(cat_name,createdOn) VALUES ('category1',CURDATE());
+INSERT INTO category_tab(cat_name,createdOn) VALUES ('category2',CURDATE());
+INSERT INTO category_tab(cat_name,createdOn) VALUES ('category3',CURDATE());
+INSERT INTO category_tab(cat_name,createdOn) VALUES ('category4',CURDATE());
+INSERT INTO category_tab(cat_name,createdOn) VALUES ('category5',CURDATE());
+INSERT INTO admin_tab(admin_name,admin_password) VALUES ('admin','admin');
+INSERT INTO product_tab( product_category, product_price, product_name, addedOn) VALUES (1,123.45,'product1',CURDATE());
+INSERT INTO product_tab( product_category, product_price, product_name, addedOn) VALUES (2,234.89,'product2',CURDATE());
+INSERT INTO product_tab( product_category, product_price, product_name, addedOn) VALUES (1,7890.456,'product3',CURDATE());
+INSERT INTO product_tab( product_category, product_price, product_name, addedOn) VALUES (4,123.45,'product4',CURDATE());
+INSERT INTO product_tab( product_category, product_price, product_name, addedOn) VALUES (5,400.34,'product5',CURDATE());
+INSERT INTO product_tab( product_category, product_price, product_name, addedOn) VALUES (3,19999.99,'product6',CURDATE());
+INSERT INTO user_tab( firstName,lastName,emailId,password,address,age,createOn) VALUES ('john','doe','john@ex.com','john','123 st,west bank',25,CURDATE());
+INSERT INTO user_tab( firstName,lastName,emailId,password,address,age,createOn) VALUES ('soumya','ramkumar','soumya@ex.com','john','123 st,west bank',28,CURDATE());
+INSERT INTO user_tab( firstName,lastName,emailId,password,address,age,createOn) VALUES ('ram','govindaraj','ram@ex.com','john','123 st,west bank',34,CURDATE());
+INSERT INTO user_tab( firstName,lastName,emailId,password,address,age,createOn) VALUES ('taneesha','shri','tanu@ex.com','john','123 st,west bank',3,CURDATE());
+INSERT INTO user_tab( firstName,lastName,emailId,password,address,age,createOn) VALUES ('saranya','govindaraj','saranya@ex.com','john','123 st,west bank',36,CURDATE());
+INSERT INTO user_tab( firstName,lastName,emailId,password,address,age,createOn) VALUES ('vijay','shri','viajy@ex.com','john','123 st,west bank',24,CURDATE());
+INSERT INTO user_tab( firstName,lastName,emailId,password,address,age,createOn) VALUES ('nandida','shanmugam','nandi@ex.com','john','123 st,west bank',19,CURDATE());
+INSERT INTO user_tab( firstName,lastName,emailId,password,address,age,createOn) VALUES ('subathra','kaviarasu','suba@ex.com','john','123 st,west bank',36,CURDATE());
+
+--select * from product_tab p join category_tab c on p.product_category=c.catId join  purchase_items_tab item on item.productId= p.poductId join purchase_order_tab po on po.poId=item.items where p.product_category = 1 and po.purchaseDate=CURDATE();
